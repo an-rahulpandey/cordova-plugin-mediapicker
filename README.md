@@ -1,10 +1,15 @@
+
+# IMPORTANT NOTE
+
+This is untested version of the original plugin https://github.com/an-rahulpandey/ios-audio-picker. In this version we have added the Android Support (thanks to @kukukk). Please test it and repot the issues. If possible please send a pull request for the fixes. Thanks for your support. 
+
 # Description
 
 The plugin allows you to select the song from iOS music library and copy it in your app Document directory. Then you can use the [cordova media plugin](https://github.com/apache/cordova-plugin-media) to play the song. Check the demo on how to play a song via media plugin.
 
 ### Installation
 
-    cordova plugin add https://github.com/an-rahulpandey/ios-audio-picker.git
+    cordova plugin add https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git
 
 ### Methods & Usage
 
@@ -12,7 +17,7 @@ The plugin allows you to select the song from iOS music library and copy it in y
 
 
 ````
-window.plugins.iOSAudioPicker.getAudio(success,error,multiple,icloud);
+window.plugins.mediapicker.getAudio(success,error,multiple,icloud);
 ````
 
   success - will be called when the user has done selecting the songs. You can get the array of songs list using this
@@ -45,7 +50,7 @@ window.plugins.iOSAudioPicker.getAudio(success,error,multiple,icloud);
 - **To delete the song**
 
 ````
-window.plugins.iOSAudioPicker.deleteSongs(success,error,option,src);
+window.plugins.mediapicker.deleteSongs(success,error,option,src);
 ````
 
 
