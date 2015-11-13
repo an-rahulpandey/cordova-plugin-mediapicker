@@ -22,7 +22,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class AudioPicker extends CordovaPlugin {
+public class MediaPicker extends CordovaPlugin {
 
     private static final int REQUEST_PICK_AUDIO = 1;
 
