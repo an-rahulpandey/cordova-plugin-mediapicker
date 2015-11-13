@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="me.rahul.plugins.audio-picker"
+        id="me.rahul.plugins.mediapicker"
         version="1.0.0">
 
-        <name>AudioPicker</name>
-        <description>Select Audio files Using Media Picker</description>
+        <name>MediaPicker</name>
+        <description>Select Media files Using Media Picker Cordova Plugin</description>
 
         <author>Rahul Pandey</author>
 
@@ -13,20 +13,20 @@
             <engine name="cordova" version=">=3.0.0" />
         </engines>
 
-        <js-module name="AudioPicker" src="www/AudioPicker.js">
-            <clobbers target="window.plugins.AudioPicker" />
+        <js-module name="MediaPicker" src="www/MediaPicker.js">
+            <clobbers target="window.plugins.mediapicker" />
         </js-module>
 
         <platform name="ios">
 
             <config-file parent="/*" target="config.xml">
-                <feature name="AudioPicker">
-                    <param name="ios-package" value="AudioPicker" />
+                <feature name="MediaPicker">
+                    <param name="ios-package" value="MediaPicker" />
                 </feature>
             </config-file>
 
-            <header-file src="src/ios/AudioPicker.h" />
-            <source-file src="src/ios/AudioPicker.m" />
+            <header-file src="src/ios/MediaPicker.h" />
+            <source-file src="src/ios/MediaPicker.m" />
 
             <framework src="MediaPlayer.framework" weak="true" />
 
@@ -34,8 +34,8 @@
 
         <platform name="android">
             <config-file target="res/xml/config.xml" parent="/*">
-                <feature name="AudioPicker" >
-                    <param name="android-package" value="me.rahul.plugins.AudioPicker"/>
+                <feature name="MediaPicker" >
+                    <param name="android-package" value="me.rahul.plugins.MediaPicker"/>
                 </feature>
             </config-file>
 
@@ -43,7 +43,7 @@
                 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
             </config-file>
 
-            <source-file src="src/android/AudioPicker.java" target-dir="src/me/rahul/plugins" />
+            <source-file src="src/android/MediaPicker.java" target-dir="src/me/rahul/plugins" />
             <source-file src="src/android/Base64.java" target-dir="src/me/rahul/plugins" />
      </platform>
 </plugin>
