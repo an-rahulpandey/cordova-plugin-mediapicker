@@ -1,9 +1,9 @@
-/********* AudioPicker.m Cordova Plugin Implementation *******/
+/********* MediaPicker.m Cordova Plugin Implementation *******/
 
-#import "AudioPicker.h"
+#import "MediaPicker.h"
 #import <AVFoundation/AVFoundation.h>
 
-@implementation AudioPicker
+@implementation MediaPicker
 
 - (void) getAudio:(CDVInvokedUrlCommand *)command
 {
