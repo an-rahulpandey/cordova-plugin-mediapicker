@@ -1,4 +1,4 @@
-/********* AudioPicker.h Cordova Plugin header *******/
+/********* MediaPicker.h Cordova Plugin header *******/
 
 #import <Cordova/CDVPlugin.h>
 #import <Cordova/CDV.h>
