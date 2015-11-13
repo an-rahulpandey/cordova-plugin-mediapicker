@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-audio-picker",
-  "version": "0.0.7",
+  "name": "cordova-plugin-mediapicker",
+  "version": "0.0.1",
   "description": "Cordova/Phonegap plugin to select songs or audio files from iTunes Library",
   "cordova": {
-    "id": "me.rahul.plugins.audio-picker",
+    "id": "me.rahul.plugins.mediapicker",
     "platforms": [
       "ios",
       "android"
@@ -11,10 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/an-rahulpandey/ios-audio-picker.git"
+    "url": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git"
   },
   "keywords": [
     "ios audio picker",
+    "ios media picker",
+    "media picker",
     "ecosystem:cordova",
     "cordova-ios",
     "audio picker"
@@ -28,7 +30,7 @@
   "author": "Rahul Pandey",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/an-rahulpandey/ios-audio-picker/issues"
+    "url": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker/issues"
   },
-  "homepage": "https://github.com/an-rahulpandey/ios-audio-picker"
+  "homepage": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker"
 }
