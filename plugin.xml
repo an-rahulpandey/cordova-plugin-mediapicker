@@ -35,7 +35,7 @@
         <platform name="android">
             <config-file target="res/xml/config.xml" parent="/*">
                 <feature name="MediaPicker" >
-                    <param name="android-package" value="me.rahul.plugins.MediaPicker"/>
+                    <param name="android-package" value="me.rahul.plugins.mediapicker.MediaPicker"/>
                 </feature>
             </config-file>
 
@@ -43,7 +43,7 @@
                 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
             </config-file>
 
-            <source-file src="src/android/MediaPicker.java" target-dir="src/me/rahul/plugins" />
-            <source-file src="src/android/Base64.java" target-dir="src/me/rahul/plugins" />
+            <source-file src="src/android/MediaPicker.java" target-dir="src/me/rahul/plugins/mediapicker" />
+            <source-file src="src/android/Base64.java" target-dir="src/me/rahul/plugins/mediapicker" />
      </platform>
 </plugin>
