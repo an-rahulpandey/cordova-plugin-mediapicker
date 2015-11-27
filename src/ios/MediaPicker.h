@@ -5,7 +5,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 
-@interface AudioPicker : CDVPlugin <MPMediaPickerControllerDelegate> {
+@interface MediaPicker : CDVPlugin <MPMediaPickerControllerDelegate> {
     NSString *callbackID;
     NSData *audioData;
     CDVPluginResult *plresult;
