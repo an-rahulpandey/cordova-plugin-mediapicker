@@ -1,4 +1,4 @@
-package me.rahul.plugins;
+package me.rahul.plugins.mediapicker;
 
 /**
  * <p>Encodes and decodes to and from Base64 notation.</p>
