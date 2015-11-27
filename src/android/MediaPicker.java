@@ -1,4 +1,4 @@
-package me.rahul.plugins;
+package me.rahul.plugins.mediapicker;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
