@@ -36,31 +36,31 @@ window.plugins.mediapicker.getAudio(success,error,multiple,icloud);
       console.log(e);
     }
 ````  
-**multiple** - a string variable which allows you the disable multiple songs selection from the user. You can either pass 'true' or 'false'
+**multiple** - a boolean variable which allows you the disable multiple songs selection from the user. You can either pass ``true`` or ``false``
  
-**icloud** - a string variable if sets 'true' will show the iCloud songs otherwise not.
+**icloud** - a boolean variable if sets ``true`` will show the iCloud songs otherwise not.
 ````
-    var multiple = 'true' // Will allow user to select multiple songs.
+    var multiple = true; // Will allow user to select multiple songs.
     or
-    var multiple = 'false' // Will allow user to select only one song.
+    var multiple = false; // Will allow user to select only one song.
     
-    var icloud = 'true' // Will show iCloud songs.
+    var icloud = true; // Will show iCloud songs.
     or
-    var icloud = 'false' // Will only show songs available locally on device.
+    var icloud =  false; // Will only show songs available locally on device.
 ````
 
 - **To delete the song**
 
 ````
-window.plugins.mediapicker.deleteSongs(success,error,option,src);
+window.plugins.mediapicker.deleteSongs(success,error,multiple,src);
 ````
 
 
- option - To delete multiple files or single file. You can either pass 'true' or 'false'.
+ multiple - To delete multiple files or single file. You can either pass ``true`` or ``false``.
 ````
-    var options = 'true' // Will delete multiple songs.
+    var multiple = true; // Will delete multiple songs.
     or
-    var options = 'false' // Will delete only one song.
+    var multiple = false; // Will delete only one song.
 ````
   
   src - It depends on the value of option. If the option is true, then the src will be an array containing full path to file. Otherwise a string will single full path. The full path should not contain file://localhost or any encoded string like Value%20Space. It should start like this /var/mobile/....../file name.m4a. See demo for more information.

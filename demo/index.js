@@ -49,12 +49,12 @@ function playsong()
 
 function delsong()
 {
-    window.plugins.mediapicker.deleteSongs(delSuccess,delError,'false',src);
+    window.plugins.mediapicker.deleteSongs(delSuccess,delError,false,src);
 }
 
 function delmsong()
 {
-    window.plugins.mediapicker.deleteSongs(delSuccess,delError,'true',srcarray);
+    window.plugins.mediapicker.deleteSongs(delSuccess,delError,true,srcarray);
 }
 
 function delSuccess(a)

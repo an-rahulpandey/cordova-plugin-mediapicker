@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.content.ContentResolver;
 import android.media.MediaMetadataRetriever;
+import android.util.Base64;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,7 +27,7 @@ public class MediaPicker extends CordovaPlugin {
 
     private static final int REQUEST_PICK_AUDIO = 1;
 
-    private static final List<String> SUPPORTED_EXTENSION = Arrays.asList("mp3", "ogg", "wav", "m4a");
+    private static final List<String> SUPPORTED_EXTENSION = Arrays.asList("mp3", "ogg", "wav", "m4a", "amr", "aac", "3gp", "mkv", "flac");
 
     private CallbackContext mCallbackContext;
 
@@ -56,7 +57,8 @@ public class MediaPicker extends CordovaPlugin {
                     Uri uri = intent.getData();
                     String extension = getUriExtension(uri);
                     if (extension != null) {
-                        String destPath = cordova.getActivity().getFilesDir() + "/track." + extension;
+                        String fileName = "AUDIO_" + Base64.encodeToString(intent.getData().getPath().getBytes(), Base64.URL_SAFE);
+                        String destPath = cordova.getActivity().getFilesDir() + "/" + fileName + "." + extension;
                         if (copyUriToPath(uri, destPath)) {
                             JSONObject mediaInfo = getMediaInfoFromPath(destPath);
                             mCallbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, mediaInfo));
@@ -87,6 +89,16 @@ public class MediaPicker extends CordovaPlugin {
                 extension = "wav";
             } else if (type.equals("audio/ogg")) {
                 extension = "ogg";
+            } else if (type.equals("audio/amr")) {
+                extension = "amr";
+            } else if (type.equals("audio/aac")) {
+                extension = "aac";
+            } else if (type.equals("audio/3gpp")) {
+                extension = "3gp";
+            } else if (type.equals("audio/x-matroska")) {
+                extension = "mkv";
+            } else if (type.equals("audio/flac") || type.equals("audio/x-flac")) {
+                extension = "flac";
             }
         } else {
             String filePath = uri.toString();
@@ -162,7 +174,7 @@ public class MediaPicker extends CordovaPlugin {
             if (art == null) {
                 image = "No Image";
             } else {
-                image = Base64.encodeBytes(art);
+                image = Base64.encodeToString(art, Base64.DEFAULT);
             }
         } catch (Exception e) {
             e.printStackTrace();
