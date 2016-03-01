@@ -57,7 +57,7 @@ public class MediaPicker extends CordovaPlugin {
                     Uri uri = intent.getData();
                     String extension = getUriExtension(uri);
                     if (extension != null) {
-                        String fileName = "AUDIO_" + Base64.encodeToString(intent.getData().getPath().getBytes(), Base64.URL_SAFE);
+                        String fileName = "AUDIO_" + Base64.encodeToString(intent.getData().getPath().getBytes(), Base64.URL_SAFE | Base64.NO_WRAP);
                         String destPath = cordova.getActivity().getFilesDir() + "/" + fileName + "." + extension;
                         if (copyUriToPath(uri, destPath)) {
                             JSONObject mediaInfo = getMediaInfoFromPath(destPath);
