@@ -95,14 +95,20 @@
                 artImageFound = YES;
             }
 
-            NSNumber *duration = [song valueForProperty:MPMediaItemPropertyPlaybackDuration];
-            NSString *genre = [song valueForProperty:MPMediaItemPropertyGenre];
-
             NSLog(@"title = %@",title);
             NSLog(@"albumTitle = %@",albumTitle);
             NSLog(@"artist = %@",artist);
             NSLog(@"songurl = %@",songurl);
 
+            // some songs are protected by DRM
+            if(!songurl){
+                plresult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"This song is protected by Digital Rights Management (DRM) and cannot be accessed."];
+                [self.commandDelegate sendPluginResult:plresult callbackId:callbackID];
+                break;
+            }
+
+            NSNumber *duration = [song valueForProperty:MPMediaItemPropertyPlaybackDuration];
+            NSString *genre = [song valueForProperty:MPMediaItemPropertyGenre];
 
             AVURLAsset *songURL = [AVURLAsset URLAssetWithURL:songurl options:nil];
 
