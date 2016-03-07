@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-mediapicker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cordova/Phonegap plugin to select songs or audio files from iTunes Library",
   "cordova": {
     "id": "me.rahul.plugins.mediapicker",
