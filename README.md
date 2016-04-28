@@ -3,7 +3,7 @@
 
 This is untested version of the original plugin https://github.com/an-rahulpandey/ios-audio-picker. In this version we have added the Android Support (thanks to [@kukukk](https://github.com/kukukk)). Please test it and repot the issues. If possible please send a pull request for the fixes. Thanks for your support.
 
-The working original version of the plugin can be found here - https://github.com/an-rahulpandey/ios-audio-picker/
+Old version of the plugin can be found here - https://github.com/an-rahulpandey/ios-audio-picker/
 
 # Description
 
