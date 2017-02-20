@@ -19,7 +19,7 @@ The plugin allows you to select the song from iOS music library and copy it in y
 
 
 ````
-window.plugins.mediapicker.getAudio(success,error,multiple,icloud);
+window.plugins.mediapicker.getAudio(success,error,multiple,icloud,title);
 ````
 
   success - will be called when the user has done selecting the songs. You can get the array of songs list using this
@@ -39,6 +39,8 @@ window.plugins.mediapicker.getAudio(success,error,multiple,icloud);
 **multiple** - a boolean variable which allows you the disable multiple songs selection from the user. You can either pass ``true`` or ``false``
  
 **icloud** - a boolean variable if sets ``true`` will show the iCloud songs otherwise not.
+
+**title** - A String value to set the title of the picker (only works in iOS).
 ````
     var multiple = true; // Will allow user to select multiple songs.
     or
