@@ -66,11 +66,3 @@ window.plugins.mediapicker.deleteSongs(success,error,multiple,src);
 ````
   
   src - It depends on the value of option. If the option is true, then the src will be an array containing full path to file. Otherwise a string will single full path. The full path should not contain file://localhost or any encoded string like Value%20Space. It should start like this /var/mobile/....../file name.m4a. See demo for more information.
-
-### iOS Permissions
-
-In iOS 10 to avoid the crash app you must declare next privacy description in your info.plist file, located in xcode project.
-
-* NSAppleMusicUsageDescription: description
-
-![ScreenShot](https://lh5.googleusercontent.com/2PyByz1q7QpGPc_sAYLRyN2UEWCzcBByhl_rAGz-zEsVq-UjVrSSUv4Fxg65XLoQTZJlgOxh0pRtvNs=w2871-h1606-rw)
