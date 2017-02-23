@@ -24,6 +24,12 @@
                     <param name="ios-package" value="MediaPicker" />
                 </feature>
             </config-file>
+                
+            <config-file target="*-Info.plist" parent="*">
+                <key>NSAppleMusicUsageDescription</key>
+                <string>This app requires access to music library.</string>
+            </config-file>
+
 
             <header-file src="src/ios/MediaPicker.h" />
             <source-file src="src/ios/MediaPicker.m" />
