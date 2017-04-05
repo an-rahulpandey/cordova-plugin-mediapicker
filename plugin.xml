@@ -25,11 +25,9 @@
                 </feature>
             </config-file>
                 
-            <config-file target="*-Info.plist" parent="*">
-                <key>NSAppleMusicUsageDescription</key>
+            <config-file target="*-Info.plist" parent="NSAppleMusicUsageDescription">
                 <string>This app requires access to music library.</string>
             </config-file>
-
 
             <header-file src="src/ios/MediaPicker.h" />
             <source-file src="src/ios/MediaPicker.m" />
