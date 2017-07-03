@@ -61,14 +61,14 @@ public class MediaPicker extends CordovaPlugin {
                         String destPath = cordova.getActivity().getFilesDir() + "/" + fileName + "." + extension;
                         if (copyUriToPath(uri, destPath)) {
                             JSONObject mediaInfo = getMediaInfoFromPath(destPath);
-                            JSONArray mediaInfoArray = new Array();
+                            JSONArray mediaInfoArray = new JSONArray();
                             try {
                                 mediaInfoArray.put(mediaInfo);
                                 mCallbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, mediaInfo));
                             } catch (Exception e){
                                 mCallbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, "JSON Array Error"));
                             }
-                            
+
                         } else {
                             mCallbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, "Error copying file"));
                         }
