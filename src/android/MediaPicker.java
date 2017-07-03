@@ -64,7 +64,7 @@ public class MediaPicker extends CordovaPlugin {
                             JSONArray mediaInfoArray = new JSONArray();
                             try {
                                 mediaInfoArray.put(mediaInfo);
-                                mCallbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, mediaInfo));
+                                mCallbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, mediaInfoArray));
                             } catch (Exception e){
                                 mCallbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, "JSON Array Error"));
                             }
